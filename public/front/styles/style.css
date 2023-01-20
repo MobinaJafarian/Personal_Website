@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/vazir.eot') format('eot');
+    src : url('../fonts/vazir.ttf') format('truetype'),
+    url('../fonts/vazir.woff') format('woff'),
+    url('../fonts/vazir.woff') format('woff2');
+}
+
+
+
+body{
+    direction: ltr;
+    font-family: 'vazir' !important;
+}
+
+.home-text{
+    padding-right: 200px;
+}
+
+.home-text p{
+    width: 700px;
+}
+.home-img {
+    position: relative;
+}
+.home-img img{
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    position: absolute;
+    bottom: 0;
+}
+
+.home-img::before{
+    content: "";
+    position: absolute;
+    clip-path: polygon(0 0, 61% 0, 100% 100%, 0% 100%);
+    background: crimson;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    left: 0;
+}
+
+.blog-item img{
+    height: 250px;
+}
+
+.blogs-detail img{
+    height: auto;
+}
+
