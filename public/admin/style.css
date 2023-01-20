@@ -1,0 +1,39 @@
+#customers {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+  #customers tr:hover {background-color: #ddd;}
+
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .card-body ul li{
+    list-style: none;
+    border-bottom: 1px solid rgb(221, 221, 221);
+ }
+ 
+ .card-body ul li:last-child{
+    border-bottom: none;
+ }
+ 
+ .card-body ul li a{
+     text-decoration: none;
+     color: #222;
+     padding: 7px 0;
+     display: block;
+     font-size: 16px;
+ }
