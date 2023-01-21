@@ -3,7 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\HomeRequest;
+use App\Models\Home;
 use Illuminate\Http\Request;
+use App\Http\Services\Image\ImageService;
+
+use Intervention\Image\ImageServiceProvider;
 
 class HomeController extends Controller
 {
@@ -14,7 +19,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.home.index');
+        $home = Home::all();
+        return view('admin.home.index' , compact('home'));
     }
 
     /**
@@ -33,9 +39,23 @@ class HomeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(HomeRequest $request , ImageService $imageService)
     {
-        dd($request->all());
+       
+        $inputs = $request->all();
+
+        if ($request->hasFile('image')) {
+            $imageService->setExclusiveDirectory('images' . DIRECTORY_SEPARATOR . 'home');
+            $result = $imageService->save($request->file('image'));
+            if ($result === false) {
+                return redirect()->route('home.index')->with('swal-error', 'There was an error uploading the image');
+            }
+            $inputs['image'] = $result;
+        }
+    
+        $post = Home::create($inputs);
+        return redirect()->route('home.index')->with('swal-success', 'Your new page has been successfully launched');
+   
     }
 
     /**

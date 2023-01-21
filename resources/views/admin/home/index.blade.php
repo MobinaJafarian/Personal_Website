@@ -36,24 +36,16 @@
                                 <th>edit</th>
                                 <th>delete</th>
                             </tr>
+                            @foreach ($home as $item)
+                                
+                            
                             <tr>
-                                <td>developer</td>
-                                <td>back-end developer</td>
-                                <td>developer</td>
-                                <td>developer test developer</td>
-                                <td>developher http://</td>
-                                <td>dev</td>
-                                <td>developer</td>
-                                <td>developer</td>
-                            </tr>
-                            {{-- @foreach ($home as $item)
-                                <tr>
-                                    <td>{{ $item->title }}</td>
+                                <td>{{ $item->title }}</td>
                                     <td>{{ $item->subject }}</td>
                                     <td>{{ $item->job }}</td>
                                     <td>{{ $item->description }}</td>
                                     <td>{{ $item->link }}</td>
-                                    <td><img src="{{ asset('admin/images/home/'.$item->image) }}" width="80" alt=""></td>
+                                    <td><img src="{{ asset($item->image) }}" alt="" width="100" height="50"></td>
                                     <td><a href="{{ route('home.edit', ['id'=> $item->id]) }}">ویرایش</a></td>
                                     <td>
                                         <a href="" onclick="destroyUser(event,{{ $item->id }})">حذف</a>
@@ -63,9 +55,8 @@
                                             @method('delete')
                                         </form>
                                     </td>
-                                </tr>
-                            @endforeach --}}
-
+                            </tr>
+                            @endforeach
                         </table>
 
                         <a href="{{ route('home.create') }}" class="btn btn-success px-4 mt-3">Set home page</a>
