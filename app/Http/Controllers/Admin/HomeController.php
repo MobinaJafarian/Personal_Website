@@ -8,7 +8,6 @@ use App\Models\Home;
 use Illuminate\Http\Request;
 use App\Http\Services\Image\ImageService;
 
-use Intervention\Image\ImageServiceProvider;
 
 class HomeController extends Controller
 {
@@ -76,8 +75,9 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+    {        
+        $home = Home::findOrFail($id);
+        return view('admin.home.edit' , compact('home'));
     }
 
     /**
@@ -87,9 +87,30 @@ class HomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(HomeRequest $request, $id, Home $home , ImageService $imageService)
     {
-        //
+        $home = Home::findOrFail($id);
+        $inputs = $request->all();
+        
+        if ($request->hasFile('image')) {
+            if (!empty($home->image)) {
+                $imageService->deleteDirectoryAndFiles($home->image);
+            }
+            $imageService->setExclusiveDirectory('images' . DIRECTORY_SEPARATOR . 'home');
+            $result = $imageService->save($request->file('image'));
+            if ($result === false) {
+                return redirect()->route('home.index')->with('swal-error', 'There was an error uploading the image');
+            }
+            $inputs['image'] = $result;
+        } else {
+            if (isset($inputs['currentImage']) && !empty($home->image)) {
+                $image = $home->image;
+                $image['currentImage'] = $inputs['currentImage'];
+                $inputs['image'] = $image;
+            }
+        }
+        $home->update($inputs);
+        return redirect()->route('home.index')->with('swal-success', 'Your home page has been successfully edited');
     }
 
     /**
@@ -100,6 +121,12 @@ class HomeController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        $home = Home::findOrFail($id);
+        $result = $home->delete();
+        
+
+        return redirect()->route('home.index')->with('swal-success', 'Your home page has been successfully deleted');
+   
     }
 }

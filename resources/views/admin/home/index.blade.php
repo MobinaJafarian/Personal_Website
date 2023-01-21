@@ -24,8 +24,8 @@
                 <div class="card">
                     <div class="card-header">home page setting</div>
 
-                    <div class="card-body">
-                        <table id="customers">
+                    <div class="card-body table-responsive">
+                        <table class="table table-striped table-hover" id="customers">
                             <tr>
                                 <th>title</th>
                                 <th>about</th>
@@ -40,20 +40,21 @@
                                 
                             
                             <tr>
-                                <td>{{ $item->title }}</td>
+                                    <td>{{ $item->title }}</td>
                                     <td>{{ $item->subject }}</td>
                                     <td>{{ $item->job }}</td>
                                     <td>{{ $item->description }}</td>
                                     <td>{{ $item->link }}</td>
                                     <td><img src="{{ asset($item->image) }}" alt="" width="100" height="50"></td>
-                                    <td><a href="{{ route('home.edit', ['id'=> $item->id]) }}">ویرایش</a></td>
+                                    <td><a class="btn btn-info btn-sm" href="{{ route('home.edit', ['id'=> $item->id]) }}">Edit</a></td>
                                     <td>
-                                        <a href="" onclick="destroyUser(event,{{ $item->id }})">حذف</a>
-
-                                        <form action="{{ route('home.destroy', $item->id) }}" id="userdelete-{{ $item->id }}" method="POST">
+                                        <form class="d-inline" action="{{ route('home.destroy', $item->id) }}"  method="post">
                                             @csrf
-                                            @method('delete')
+                                            {{ method_field('delete') }}
+                                        <button class="btn btn-danger btn-sm" type="submit">delete</button>
+
                                         </form>
+
                                     </td>
                             </tr>
                             @endforeach
@@ -68,13 +69,13 @@
     </div>
 @endsection
 
-@section('js')
+{{-- @section('js')
 
-    {{-- <script>
+    <script>
         function destroyUser(event,id){
             event.preventDefault();
             document.querySelector('#userdelete-'+id).submit();
         }
-    </script> --}}
+    </script>
 
-@endsection
+@endsection --}}
