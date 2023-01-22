@@ -8,9 +8,9 @@
          <div class="row align-items-center">
               <div class="col-lg-6">
                    <div class="skill-text">
-                        {{-- <h3 class="fs-4 fw-bold pb-3">{{ $about->title }}</h3>
+                        <h3 class="fs-4 fw-bold pb-3">{{ $about->title }}</h3>
                         <p class="text-muted">{{ $about->description }}</p>
-                        <a href="{{ $about->link }}" class="btn btn-danger px-4">با من صحبت کن</a> --}}
+                        <a href="{{ $about->link }}" class="btn btn-danger px-4">contact me</a>
                    </div>
               </div>
               <div class="col-lg-6">
