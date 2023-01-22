@@ -30,35 +30,35 @@
                             
                               <div class="form-group mt-3" >
                                   <label for="">title</label>
-                                  <input type="text" class="form-control" name="title">
+                                  <input type="text" class="form-control"  value="{{ old('title')}}" name="title">
                                   @error('title')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                               </div>
                               <div class="form-group mt-3">
-                                <label for="">name</label>
-                                <input type="text" class="form-control" name="subject">
+                                <label for="">subject</label>
+                                <input type="text" class="form-control" value="{{ old('subject')}}"  name="subject">
                                 @error('subject')
                                 <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group mt-3">
                                 <label for="">position</label>
-                                <input type="text" class="form-control" name="job">
+                                <input type="text" class="form-control" value="{{ old('job')}}" name="job">
                                 @error('job')
                                 <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group mt-3">
                                 <label for="">description</label>
-                                <textarea type="text" class="form-control" name="description"></textarea>
+                                <textarea type="text" class="form-control" value="{{ old('description')}}" name="description"></textarea>
                                 @error('description')
                                 <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group mt-3">
                                 <label for="">link</label>
-                                <input type="text" class="form-control" name="link">
+                                <input type="text" class="form-control" value="{{ old('link')}}" name="link">
                                 @error('link')
                                 <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
