@@ -14,12 +14,12 @@
                    </div>
               </div>
               <div class="col-lg-6">
-                  {{-- @foreach ($skill as $item )
+                  @foreach ($skills as $item )
                          <div class="progress mt-3">
                         <div class="progress-bar" role="progressbar" style="width: {{ $item->precentage }};" aria-valuenow="25"
                              aria-valuemin="0" aria-valuemax="100">{{ $item->precentage }} {{ $item->title }}</div>
                    </div>
-                  @endforeach --}}
+                  @endforeach
               </div>
          </div>
     </div>
