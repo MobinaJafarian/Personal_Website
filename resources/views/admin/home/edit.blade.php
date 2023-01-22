@@ -8,16 +8,7 @@
                     <div class="card-header">
                         edit home page main setting
                     </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><a href="{{ route('home') }}">Dashboard</a></li>
-                            <li><a href="{{ route('home.index') }}">home</a></li>
-                            <li><a href="">about me</a></li>
-                            <li><a href="">my skills</a></li>
-                            <li><a href="">social</a></li>
-                            <li><a href="">blogs </a></li>
-                        </ul>
-                    </div>
+                    @include('layouts.side-card')
                 </div>
             </div>
             <div class="col-md-9">

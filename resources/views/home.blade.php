@@ -7,24 +7,27 @@
             <div class="card">
                 <div class="card-header">{{ __('Seeting') }}</div>
 
-                <div class="card-body">
-                    {{-- @if (session('status'))
+                @include('layouts.side-card')
+                {{-- <div class="card-body">
+                    @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
-                    @endif --}}
+                    @endif
 
                     <ul>
                         <li><a href="{{ route('home') }}">Dashboard</a></li>
                         <li><a href="{{ route('home.index') }}">home</a></li>
-                        <li><a href="">about me</a></li>
+                        <li><a href="{{ route('about.index') }}">about me</a></li>
                         <li><a href="">my skills</a></li>
                         <li><a href="">social</a></li>
                         <li><a href="">blogs </a></li>
                     </ul>
 
                     {{ __('You are logged in!') }}
-                </div>
+                </div> --}}
+
+
             </div>
         </div>
 
