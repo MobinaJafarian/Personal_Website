@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\SkillController;
 use App\Http\Controllers\Front\FrontController;
@@ -31,3 +32,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('/home/home' , HomeController::class)->parameters(['home'=>'id']);
 Route::resource('home/about' , AboutController::class)->parameters(['about' => 'id']);
 Route::resource('home/skill' , SkillController::class)->parameters(['skill' => 'id']);
+Route::resource('home/blog' , BlogController::class)->parameters(['blog' => 'id']);
