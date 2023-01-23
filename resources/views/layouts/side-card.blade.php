@@ -11,7 +11,7 @@
         <li><a href="{{ route('about.index') }}">about me</a></li>
         <li><a href="{{ route('skill.index') }}">my skills</a></li>
         <li><a href="">social</a></li>
-        <li><a href="">blogs </a></li>
+        <li><a href="{{ route('blog.index') }}">blogs </a></li>
     </ul>
 
     {{ __('You are awesome!') }}
