@@ -20,16 +20,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/' ,[FrontController::class ,  'index'])->name('front');
-// Route::get('/', function () {
-//     return view('front.index');
-// })->name('front');
+Route::get("/single/{id}", [FrontController::class, 'blogDetail'])->name('blog.detail');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-Route::resource('/home/home' , HomeController::class)->parameters(['home'=>'id']);
-Route::resource('home/about' , AboutController::class)->parameters(['about' => 'id']);
-Route::resource('home/skill' , SkillController::class)->parameters(['skill' => 'id']);
-Route::resource('home/blog' , BlogController::class)->parameters(['blog' => 'id']);
+Route::middleware('admin')->group(function (){
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::resource('/home/home' , HomeController::class)->parameters(['home'=>'id']);
+    Route::resource('home/about' , AboutController::class)->parameters(['about' => 'id']);
+    Route::resource('home/skill' , SkillController::class)->parameters(['skill' => 'id']);
+    Route::resource('home/blog' , BlogController::class)->parameters(['blog' => 'id']);
+});
