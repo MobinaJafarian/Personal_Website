@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('front/styles/bootstrap.rtl.min.css') }}">
     <link rel="stylesheet" href="{{ asset('front/styles/style.css') }}">
-    <title>وب سایت شخصی جاناتان زاپاتا</title>
+    <title>Personal Website</title>
 </head>
 
 <body>

@@ -1,8 +1,7 @@
 <section class="skill py-5">
     <div class="skill-title text-center py-5">
-         <h2 class="fw-bold">مهارت های من</h2>
-         <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
-    </div>
+         <h2 class="fw-bold">My Skills</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum non tempore, vel voluptatum aliquam et quia ad sint cum explicabo labore saepe ab minus amet nam odio ea dolore sit.</p>
 
     <div class="container">
          <div class="row align-items-center">
