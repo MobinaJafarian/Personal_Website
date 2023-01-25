@@ -49,3 +49,13 @@ body{
     height: auto;
 }
 
+.nav-link{
+    /* padding-right: 80rem; */
+    margin-right: 9rem;
+    margin-left: -9rem;
+}
+.navbar-brand{
+    padding-right: 58rem;
+    margin-right: 4rem;
+    margin-left: -36rem;
+}
