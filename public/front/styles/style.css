@@ -11,6 +11,8 @@
 body{
     direction: ltr;
     font-family: 'vazir' !important;
+    background-color: #f5f5f5 !important;
+
 }
 
 .home-text{
@@ -59,3 +61,8 @@ body{
     margin-right: 4rem;
     margin-left: -36rem;
 }
+.btn-custom{
+    background-color: #7e57c2 !important;
+    color: #e8e6f7 !important;
+  
+   }
