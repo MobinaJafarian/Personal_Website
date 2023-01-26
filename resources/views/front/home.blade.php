@@ -6,8 +6,8 @@
                         <h1 class="fw-bold pb-3">{{ $home->title }}</h1>
                         <h2 class="fw-bold">{{ $home->subject }}</h2>
                         <h4>{{ $home->job }}</h4>
-                        <p class="text-muted">{{ $home->description }}</p>
-                        <a href="{{ $home->link }}" class="btn btn-danger px-5">about me</a>
+                        <p class="text-muted">{{ \Illuminate\Support\Str::limit($home->description, 50) }}</p>
+                        <a href="{{ $home->link }}" class="btn btn-custom px-5">about me</a>
                    </div>
               </div>
               <div class="col-lg-6 home-img min-vh-100">

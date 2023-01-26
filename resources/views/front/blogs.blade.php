@@ -13,7 +13,7 @@
                 <div class="blog-item-text p-2">
                      <h4 class="p-2 fw-bold fs-5 border-bottom">{{ $item->title }}</h4>
                      <p class="text-muted">{{ \Illuminate\Support\Str::limit($item->description, 100) }} </p>
-                     <a href="{{ route('blog.detail', $item->id) }}" target="_blank" class="btn btn-danger w-100">Read More</a>
+                     <a href="{{ route('blog.detail', $item->id) }}" target="_blank" class="btn btn-custom w-100">Read More</a>
                 </div>
                 </div>
            </div>

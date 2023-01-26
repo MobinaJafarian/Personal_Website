@@ -9,13 +9,13 @@
                    <div class="skill-text">
                         <h3 class="fs-4 fw-bold pb-3">{{ $about->title }}</h3>
                         <p class="text-muted">{{ $about->description }}</p>
-                        <a href="{{ $about->link }}" class="btn btn-danger px-4">contact me</a>
+                        <a href="{{ $about->link }}" class="btn btn-custom px-4">contact me</a>
                    </div>
               </div>
               <div class="col-lg-6">
                   @foreach ($skills as $item )
                          <div class="progress mt-3">
-                        <div class="progress-bar" role="progressbar" style="width: {{ $item->precentage }};" aria-valuenow="25"
+                        <div class="progress-bar" role="progressbar" style="width: {{ $item->precentage }};background-color: #7e57c2 !important;" aria-valuenow="25"
                              aria-valuemin="0" aria-valuemax="100">{{ $item->precentage }} {{ $item->title }}</div>
                    </div>
                   @endforeach
