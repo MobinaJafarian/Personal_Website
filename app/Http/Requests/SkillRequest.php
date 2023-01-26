@@ -26,12 +26,12 @@ class SkillRequest extends FormRequest
         if ($this->isMethod('post')) {
             return [
                 'title' => 'required|max:120|min:2|regex:/^[ا-یa-zA-Z0-9\-۰-۹ء-ي., ]+$/u',
-                'precentage' => 'required|max:100|min:1|numeric'
+                'precentage' => 'required|max:100|min:1'
             ];
         } else {
             return [
                 'title' => 'required|max:120|min:2|regex:/^[ا-یa-zA-Z0-9\-۰-۹ء-ي., ]+$/u',
-                'precentage' => 'required|max:100|min:1|numeric'
+                'precentage' => 'required|max:100|min:1'
             ];
         }
     }
