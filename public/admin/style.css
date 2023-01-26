@@ -1,12 +1,20 @@
+body{
+  background-color: #2b2840 !important;
+}
+.navbar{
+background-color: #2f2b43 !important;
+}
 #customers {
     border-collapse: collapse;
     width: 100%;
   }
 
   #customers td, #customers th {
-    border: 1px solid #ddd;
+    border: 1px solid #834fdc;
     padding: 8px;
     text-align: center;
+    background-color: #2f2b43 !important;
+    color: #e8e6f7 !important;
   }
 
   #customers tr:nth-child(even){background-color: #f2f2f2;}
@@ -17,13 +25,25 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: #04AA6D;
+    background-color: #9756ff !important;
     color: white;
   }
-
-  .card-body ul li{
+ 
+  .card{
+    /* background-color: #2f2b43 !important; */
+    background-color: #3d305d !important;
+  }
+.card-header{
+  background-color: #3d305d !important;
+  color: #e8e6f7 !important;
+}
+  .card-body{
+    color: #e8e6f7 !important;
+ }
+ 
+ .card-body ul li{
     list-style: none;
-    border-bottom: 1px solid rgb(221, 221, 221);
+    border-bottom: 1px solid #834fdc;
  }
  
  .card-body ul li:last-child{
@@ -32,8 +52,23 @@
  
  .card-body ul li a{
      text-decoration: none;
-     color: #222;
+     color: #e8e6f7;
      padding: 7px 0;
      display: block;
      font-size: 16px;
+ }
+
+ .btn-save{
+  background-color: #1ca2f1 !important;
+  color: #e8e6f7 !important;
+
+ }
+ .btn-edit{
+  background-color: #19a8f5 !important;
+  color: #e8e6f7 !important;
+ }
+ .btn-delete{
+  background-color: #e26177 !important;
+  color: #e8e6f7 !important;
+
  }

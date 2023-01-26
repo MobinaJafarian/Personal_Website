@@ -28,12 +28,12 @@
                                     <td>{{ $item->title }}</td>
                                     <td>{{ $item->description }}</td>
                                     <td><img src="{{ asset($item->image) }}" alt="blog" width="100" height="50"></td>
-                                    <td><a class="btn btn-info btn-sm" href="{{ route('blog.edit', ['id'=> $item->id]) }}">edit</a></td>
+                                    <td><a class="btn btn-edit btn-sm" href="{{ route('blog.edit', ['id'=> $item->id]) }}">edit</a></td>
                                     <td>
                                         <form class="d-inline" action="{{ route('blog.destroy', $item->id) }}"  method="post">
                                             @csrf
                                             {{ method_field('delete') }}
-                                        <button class="btn btn-danger btn-sm" type="submit">delete</button>
+                                        <button class="btn btn-delete btn-sm" type="submit">delete</button>
 
                                         </form>
                                     </td>
@@ -42,7 +42,7 @@
 
                         </table>
 
-                        <a href="{{ route('blog.create') }}" class="btn btn-success px-4 mt-3">Create New Blog</a>
+                        <a href="{{ route('blog.create') }}" class="btn btn-save px-4 mt-3">Create New Blog</a>
 
                     </div>
                 </div>

@@ -32,14 +32,14 @@
 
                         <div class="form-group mt-3">
                             <label for="">Skill percentage</label>
-                            <input type="text" value="{{ old('precentage' , $skill->precentage) }}" class="form-control" name="precentage">
+                            <input type="text" value="{{ old('precentage' , $skill->precentage) }}" class="form-control" name="precentage" placeholder="example: 90%">
                             @error('precentage')
                               <div class="alert alert-danger">{{ $message }}</div>
                               @enderror
                         </div>
 
                         <div class="form-group mt-3">
-                          <button type="submit" class="btn btn-success px-5">save</button>
+                          <button type="submit" class="btn btn-save px-5">save</button>
                         </div>
                       </form>
 

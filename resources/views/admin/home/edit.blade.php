@@ -63,7 +63,7 @@
                                 @enderror
                             </div>
                             <div class="form-group mt-3">
-                              <button type="submit" class="btn btn-success px-5">save</button>
+                              <button type="submit" class="btn btn-save px-5">save</button>
                             </div>
                           </form>
                     </div>

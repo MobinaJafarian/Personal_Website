@@ -37,12 +37,12 @@
                                     <td>{{ $item->description }}</td>
                                     <td>{{ $item->link }}</td>
                                     <td><img src="{{ asset($item->image) }}" alt="" width="100" height="50"></td>
-                                    <td><a class="btn btn-info btn-sm" href="{{ route('home.edit', ['id'=> $item->id]) }}">Edit</a></td>
+                                    <td><a class="btn btn-edit btn-sm" href="{{ route('home.edit', ['id'=> $item->id]) }}">Edit</a></td>
                                     <td>
                                         <form class="d-inline" action="{{ route('home.destroy', $item->id) }}"  method="post">
                                             @csrf
                                             {{ method_field('delete') }}
-                                        <button class="btn btn-danger btn-sm" type="submit">delete</button>
+                                        <button class="btn btn-delete btn-sm"  type="submit">delete</button>
 
                                         </form>
 
@@ -51,7 +51,7 @@
                             @endforeach
                         </table>
 
-                        <a href="{{ route('home.create') }}" class="btn btn-success px-4 mt-3">Set home page</a>
+                        <a href="{{ route('home.create') }}" class="btn btn-save px-4 mt-3">Set home page</a>
 
                     </div>
                 </div>

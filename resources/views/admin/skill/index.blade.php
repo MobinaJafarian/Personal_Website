@@ -28,12 +28,12 @@
                                     <td>{{ $item->precentage }}</td>
                                     <td>{{ $item->title }}</td>
 
-                                    <td><a class="btn btn-info btn-sm" href="{{ route('skill.edit', ['id'=> $item->id]) }}">edit</a></td>
+                                    <td><a class="btn btn-edit btn-sm" href="{{ route('skill.edit', ['id'=> $item->id]) }}">edit</a></td>
                                     <td>
                                         <form class="d-inline" action="{{ route('skill.destroy', $item->id) }}"  method="post">
                                             @csrf
                                             {{ method_field('delete') }}
-                                        <button class="btn btn-danger btn-sm" type="submit">delete</button>
+                                        <button class="btn btn-delete btn-sm" type="submit">delete</button>
                                         </form>
                                     </td>
                                 </tr>
@@ -41,7 +41,7 @@
 
                         </table>
 
-                        <a href="{{ route('skill.create') }}" class="btn btn-success px-4 mt-3">Create Skill Page</a>
+                        <a href="{{ route('skill.create') }}" class="btn btn-save px-4 mt-3">Create Skill Page</a>
 
                     </div>
                 </div>

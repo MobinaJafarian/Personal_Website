@@ -15,7 +15,7 @@
                 <div class="card-header">Hello there!</div>
 
                 <div class="card-body">
-                    you can change the setting from left section . preview::
+                    you can change the setting from left section.
                 </div>
             </div>
         </div>
