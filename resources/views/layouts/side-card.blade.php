@@ -1,10 +1,5 @@
 <div class="card-body">
-    {{-- @if (session('status'))
-        <div class="alert alert-success" role="alert">
-            {{ session('status') }}
-        </div>
-    @endif --}}
-
+   
     <ul>
         <li><a href="{{ route('home') }}">Dashboard</a></li>
         <li><a href="{{ route('home.index') }}">home</a></li>
