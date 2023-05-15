@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\ApplicationStatus;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -23,6 +24,7 @@ return new class extends Migration
             $table->text('note');
             $table->text('todo');
             $table->string('file');
+            $table->string('status')->default(ApplicationStatus::WantToApply->value);
             $table->timestamps();
         });
     }
