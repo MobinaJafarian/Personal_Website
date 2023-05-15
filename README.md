@@ -31,7 +31,7 @@ Personal Website using Laravel
 - Skills
 - About Me
 - Blogs Managment
-
+- [ ] Application Tracker
 
 ## Screenshots
 ![laravel Personal website Dashboard screenshot](./public/images/ScreenShots/Screenshot%202023-01-26%20at%2016-30-43%20Personal%20Website.png)
