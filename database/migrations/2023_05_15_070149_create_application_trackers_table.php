@@ -16,8 +16,8 @@ return new class extends Migration
     {
         Schema::create('application_trackers', function (Blueprint $table) {
             $table->id();
-            $table->string('company-name');
-            $table->string('job-title');
+            $table->string('company_name');
+            $table->string('job_title');
             $table->integer('salary');
             $table->string('location');
             $table->string('link');
