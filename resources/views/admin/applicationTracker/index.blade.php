@@ -23,20 +23,28 @@
                                 <th>Salary</th>
                                 <th>Location</th>
                                 <th>Link</th>
+                                <th>Status</th>
                                 <th>Note</th>
                                 <th>Todo</th>
                                 <th>File</th>
                                 <th>edit</th>
                                 <th>delete</th>
                             </tr>
-                            @foreach ($skills as $item)
+                            @foreach ($applications as $application)
                                 <tr>
-                                    <td>{{ $item->precentage }}</td>
-                                    <td>{{ $item->title }}</td>
+                                    <td>{{ $application->company_name }}</td>
+                                    <td>{{ $application->job_title }}</td>
+                                    <td>{{ $application->salary }}</td>
+                                    <td>{{ $application->location }}</td>
+                                    <td>{{ $application->link }}</td>
+                                    <td>{{ $application->status }}</td>
+                                    <td>{{ $application->note }}</td>
+                                    <td>{{ $application->todo }}</td>
+                                    <td>{{ $application->file }}</td>
 
-                                    <td><a class="btn btn-edit btn-sm" href="{{ route('skill.edit', ['id'=> $item->id]) }}">edit</a></td>
+                                    <td><a class="btn btn-edit btn-sm" href="{{ route('applicationTracker.edit', ['id'=> $application->id]) }}">edit</a></td>
                                     <td>
-                                        <form class="d-inline" action="{{ route('skill.destroy', $item->id) }}"  method="post">
+                                        <form class="d-inline" action="{{ route('applicationTracker.destroy', $application->id) }}"  method="post">
                                             @csrf
                                             {{ method_field('delete') }}
                                         <button class="btn btn-delete btn-sm" type="submit">delete</button>
@@ -47,7 +55,7 @@
 
                         </table>
 
-                        <a href="{{ route('skill.create') }}" class="btn btn-save px-4 mt-3">Create Skill Page</a>
+                        <a href="{{ route('applicationTracker.create') }}" class="btn btn-save px-4 mt-3">Create new application</a>
 
                     </div>
                 </div>
