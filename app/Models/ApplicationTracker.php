@@ -17,7 +17,7 @@ class ApplicationTracker extends Model
         'link',
         'note',
         'todo',
-        'file',
+        // 'file',
         'status',
     ];
 
