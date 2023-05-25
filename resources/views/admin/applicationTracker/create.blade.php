@@ -22,7 +22,7 @@
                           
                         <div class="form-group mt-3">
                             <label for="">Company Name</label>
-                            <input type="text" class="form-control" value="{{ old('company-name')}}" name="company-name">
+                            <input type="text" class="form-control" value="{{ old('company_name')}}" name="company_name">
                             @error('company-name')
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -30,7 +30,7 @@
                         
                         <div class="form-group mt-3">
                             <label for="">Job Tiltle</label>
-                            <input type="text" class="form-control" value="{{ old('job-title')}}" name="job-title">
+                            <input type="text" class="form-control" value="{{ old('job_title')}}" name="job_title">
                             @error('jb-title')
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -64,8 +64,8 @@
                             <label for="">Status</label>
                             <div>
                                 <select class="form-select" name="status" value="{{ old('status')}}" style="width: 100%;" data-select2-id="2" tabindex="-1" aria-hidden="true">
-                                    @foreach($applicationStatus as $key => $status) 
-                                        <option value="{{$key}}">{{$status}}</option>
+                                    @foreach($applicationStatus as $status) 
+                                        <option value="{{$status->value }}">{{$status->name }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -88,13 +88,13 @@
                         </div>
 
 
-                        <div class="form-group mt-3">
+                        {{-- <div class="form-group mt-3">
                             <label for="">File</label>
                             <input type="file" class="form-control" value="{{ old('file') }}" name="file">
                             @error('file')
                               <div class="alert alert-danger">{{ $message }}</div>
                               @enderror
-                        </div>
+                        </div> --}}
 
 
                         <div class="form-group mt-3">
