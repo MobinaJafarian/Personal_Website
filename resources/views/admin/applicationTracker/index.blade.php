@@ -18,6 +18,7 @@
                     <div class="card-body">
                         <table id="customers">
                             <tr>
+                                <th>#</th>
                                 <th>Company Name</th>
                                 <th>Job Title</th>
                                 <th>Salary</th>
@@ -30,8 +31,9 @@
                                 <th>edit</th>
                                 <th>delete</th>
                             </tr>
-                            @foreach ($applications as $application)
+                            @foreach ($applications as $key => $application)
                                 <tr>
+                                    <td>{{ $key += 1 }}</td>
                                     <td>{{ $application->company_name }}</td>
                                     <td>{{ $application->job_title }}</td>
                                     <td>{{ $application->salary }}</td>
