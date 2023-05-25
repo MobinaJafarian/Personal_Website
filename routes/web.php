@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\ApplicationTracker;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\SkillController;
@@ -25,9 +26,10 @@ Route::get("/single/{id}", [FrontController::class, 'blogDetail'])->name('blog.d
 Auth::routes();
 
 Route::middleware('admin')->group(function (){
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::resource('/home/home' , HomeController::class)->parameters(['home'=>'id']);
     Route::resource('home/about' , AboutController::class)->parameters(['about' => 'id']);
     Route::resource('home/skill' , SkillController::class)->parameters(['skill' => 'id']);
     Route::resource('home/blog' , BlogController::class)->parameters(['blog' => 'id']);
+    Route::resource('home/applicationTracker' , ApplicationTracker::class)->parameters(['applicationTracker' => 'id']);
 });

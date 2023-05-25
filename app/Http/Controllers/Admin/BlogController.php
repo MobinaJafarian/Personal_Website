@@ -122,8 +122,8 @@ class BlogController extends Controller
     {
         $blog = Blog::findOrFail($id);
         $result = $blog->delete();
-        
 
+        
         return redirect()->route('blog.index')->with('swal-success', 'Your blog has been successfully deleted');
    
     }
